@@ -5,22 +5,15 @@ def substrings(words, dictionary)
   # Create hash to store values
   appearances = Hash.new(0)
 
-  # Loop for one word in words
+  # Loop for words
   for dict_word in dictionary do
     for word in words_array do
       if word.downcase.include?(dict_word.downcase)
-        appearances[dict_word] += 1
+        appearances[:dict_word] += 1
       end
     end
   end
   puts appearances
-
-  # Check if each word is in the dictionary
-  # Nested loop - first the words then the dictionary
-  # Check whether the words are in the dictionary or the dictionary word is in words
-  # Add to new hash/hash counter if it is - words is the key 
-
-
 end
 
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
